@@ -45,7 +45,7 @@ namespace InDappledGroves
                         new SkillItem
                         {
                             Code = new AssetLocation("chopping"),
-                            Name = Lang.Get("Chop", Array.Empty<object>())
+                            Name = Lang.Get("indappledgroves:Chopping")
                         }
                 };
 

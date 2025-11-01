@@ -22,7 +22,7 @@ namespace InDappledGroves.Blocks
 
             var part = Lang.Get("material-" + $"{material}");
             part = $"{part[0].ToString().ToUpper()}{part.Substring(1)}";
-            return string.Format($"{part} {Lang.Get("indappledgroves:block-barkbasket")}");
+            return Lang.Get("indappledgroves:block-barkbasket", part);
         }
 
         public override int GetRandomColor(ICoreClientAPI capi, BlockPos pos, BlockFacing facing, int rndIndex)

@@ -52,7 +52,7 @@ namespace InDappledGroves.CollectibleBehaviors
                         new SkillItem
                         {
                             Code = new AssetLocation("sawing"),
-                            Name = Lang.Get("Saw", Array.Empty<object>())
+                            Name = Lang.Get("indappledgroves:Sawing")
                         }
                 };
 

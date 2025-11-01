@@ -18,7 +18,7 @@ namespace InDappledGroves.Blocks
 
             var part = Lang.Get($"{material}");
             part = $"{part[0].ToString().ToUpper()}{part.Substring(1)}";
-            return string.Format($"{part} {Lang.Get("indappledgroves:block-board")}");
+            return Lang.Get("indappledgroves:block-board", part);
         }
 
         public override void OnBlockBroken(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1)

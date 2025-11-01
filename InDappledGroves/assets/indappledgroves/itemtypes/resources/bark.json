@@ -32,7 +32,7 @@
 	transitionablePropsByType: {
 		"*-soaked": [
 			{
-				type: "Cure",
+				type: "Convert",
 				freshHours: { avg: 0 },
 				transitionHours: { avg: 24 },
 				transitionedStack: { type: "item", code: "bark-{bark}-dry" },

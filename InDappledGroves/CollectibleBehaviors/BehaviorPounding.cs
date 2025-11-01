@@ -52,7 +52,7 @@ namespace InDappledGroves.CollectibleBehaviors
                         new SkillItem
                         {
                             Code = new AssetLocation("pounding"),
-                            Name = Lang.Get("Pound", Array.Empty<object>())
+                            Name = Lang.Get("indappledgroves:Pounding")
                         }
                 };
 

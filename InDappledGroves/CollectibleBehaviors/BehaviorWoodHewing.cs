@@ -46,7 +46,7 @@ namespace InDappledGroves.CollectibleBehaviors
                         new SkillItem
                         {
                             Code = new AssetLocation("hewing"),
-                            Name = Lang.Get("Hew", Array.Empty<object>())
+                            Name = Lang.Get("indappledgroves:Hewing")
                         }
                 };
 

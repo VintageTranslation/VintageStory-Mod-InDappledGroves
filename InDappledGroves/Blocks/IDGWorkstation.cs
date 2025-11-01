@@ -120,9 +120,11 @@ namespace InDappledGroves.Blocks
             base.GetHeldItemName(stack);
             string primary = Variant["primary"];
             string secondary = Variant["secondary"];
-            string materials = Lang.Get("material-" + $"{primary}") + (secondary != null ? " and " + Lang.Get("material-" + $"{secondary}") : "");
+            string materialPrimary = Lang.Get($"material-{primary}");
+            string? materialSecondary = secondary != null ? Lang.Get($"material-{secondary}") : null;
+            string materials = materialSecondary != null ? Lang.Get("indappledgroves:materials", materialPrimary, materialSecondary) : materialPrimary;
             string blockid = Lang.HasTranslation("indappledgroves:block-" + this.FirstCodePart()) ? "indappledgroves:block-" + this.FirstCodePart() : this.Code.Domain + ":block-" + this.FirstCodePart();
-            return string.Format($"{CultureInfo.CurrentCulture.TextInfo.ToTitleCase(materials.ToLower())} " + Lang.GetMatching(blockid));
+            return Lang.GetMatching(blockid, materials);
             
         }
 

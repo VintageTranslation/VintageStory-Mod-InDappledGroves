@@ -376,7 +376,9 @@ namespace InDappledGroves.BlockEntities
         {
             var primary = Block.Variant["primary"];
             var secondary = Block.Variant["secondary"];
-            var materials = (Lang.Get("material-" + $"{primary}") + (secondary != null ? " and " + Lang.Get("material-" + $"{secondary}") : ""));
+            string materialPrimary = Lang.Get($"material-{primary}");
+            string? materialSecondary = secondary != null ? Lang.Get($"material-{secondary}") : null;
+            string materials = materialSecondary != null ? Lang.Get("indappledgroves:materials", materialPrimary, materialSecondary) : materialPrimary;
             ItemStack stack = forPlayer.InventoryManager.ActiveHotbarSlot.Itemstack;
             string curToolMode = stack?.Collectible.GetBehavior<BehaviorIDGTool>()?.GetToolModeName(stack).ToString();
             dsc.AppendLine(Lang.GetMatching("indappledgroves:workstationholding") + ": " + (InputSlot.Empty ? Lang.GetMatching("indappledgroves:Empty") : InputSlot.Itemstack.Collectible.GetHeldItemName(InputSlot.Itemstack)));

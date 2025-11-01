@@ -51,7 +51,7 @@ namespace InDappledGroves.CollectibleBehaviors
                         new SkillItem
                         {
                             Code = new AssetLocation("planing"),
-                            Name = Lang.Get("Plane", Array.Empty<object>())
+                            Name = Lang.Get("indappledgroves:Planing")
                         }
                 };
 
